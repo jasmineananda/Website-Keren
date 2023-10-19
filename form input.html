@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Input</title>
+    <STYLE type="text/css">
+        body{
+            color:white;
+            background:rgb(96, 154, 219);
+            font-family:serif;
+        }
+    </STYLE>
+    <script>
+        function submitForm() {
+            var nama = document.getElementById("nama").value;
+            var jurusan = document.getElementById("jurusan").value;
+
+            localStorage.setItem("nama", nama);
+            localStorage.setItem("jurusan", jurusan);
+
+            alert("Data berhasil disimpan!");
+        }
+    </script>
+</head>
+<body>
+    <h1>FORMULIR MAHASISWA</h1>
+    <form action="isiii.html" method="post">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" required><br><br>
+        
+        <label for="jurusan">Jurusan:</label>
+        <input type="text" id="jurusan" name="jurusan" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
